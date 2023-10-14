@@ -41,9 +41,7 @@ export default function Change_Tid() {
 
   const bulk_update = () => {
     // Send a request to update the tid on the backend
-    let lis=[['21BD1A664P',
-    '21BD1A664W',
-    '21BD1A05A4',
+    let lis=['21BD1A664P','21BD1A664W','21BD1A05A4',
     '21BD1A058T',
     '20BD1A1244',
     '20BD1A1280',
@@ -231,7 +229,8 @@ export default function Change_Tid() {
     '21BD1A6716',
     '21BD1A660F',
     '21BD1A050T',
-    '21BD1a1244']]
+    '21BD1a1244']
+    
     for(let i=0;i<lis.length;i++){
     axios.post('https://pass-server-o7gu.onrender.com/put_council_perf', { rno:lis[i], t_id: "Council/Volunteers/Performers" })
       .then((response) => {
