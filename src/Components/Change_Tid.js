@@ -56,7 +56,7 @@ export default function Change_Tid() {
     '21BD1A6702',
     '22BD1A054Y',
     '21BD1A051F',
-    '21BD1A0660E',
+    '21BD1A660E',
     '21BD1A1282',
     '22BD1A057K',
     '20BD1A66D1',
@@ -90,7 +90,7 @@ export default function Change_Tid() {
     '21BD1A6757',
     '22BD1A056X',
     '21BD1A058B',
-    '21BD1A0661Q',
+    '21BD1A661Q',
     '20BD1A1229',
     '20BD1A0532',
     '22BD1A0549',
@@ -100,7 +100,7 @@ export default function Change_Tid() {
     '22BD1A6760',
     '20BD1A05A7',
     '22BD5A6612',
-    '21BD1A06608',
+    '21BD1A6608',
     '20BD1A0562',
     '21BD1A05AF',
     '21BD1A6712',
@@ -115,7 +115,7 @@ export default function Change_Tid() {
     '21BD1A663Q',
     '22BD1A661Z',
     '20BD1A052U',
-    '21BD1A06607',
+    '21BD1A6607',
     '22BD1A6717',
     '20BD1A059N',
     '20BD1A05BN',
@@ -134,7 +134,7 @@ export default function Change_Tid() {
     '21BD1A051W',
     '20BD1A05CM',
     '20BD1A050H',
-    '20BD1A06624',
+    '20BD1A6624',
     '21BD1A051V',
     '22BD1A0563',
     '20BD1A66A6',
@@ -229,11 +229,12 @@ export default function Change_Tid() {
     '21BD1A6716',
     '21BD1A660F',
     '21BD1A050T',
-    '21BD1a1244']
-    
+    '21BD1A1244']
+     console.log(lis.length);
     for(let i=0;i<lis.length;i++){
-    axios.post('https://pass-server-o7gu.onrender.com/put_council_perf', { rno:lis[i], t_id: "Council/Volunteers/Performers" })
+    axios.post('http://localhost:3500/put_council_perf', { rno:lis[i], t_id: "Council/Volunteers/Performers" })
       .then((response) => {
+        console.log(response.data.Success)
         console.log(lis[i]+' Tid updated successfully');
         // Optionally, you can update the personData with the new tid here
       })
@@ -245,7 +246,7 @@ export default function Change_Tid() {
 
   return (
     <div>
-      <button onClick={bulk_update}>Bulk update</button>
+      {/* <button onClick={bulk_update}>Bulk update</button> */}
       <h1>Change Tid</h1>
       <div>
 
